@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSync - Welcome</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .welcome-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=1200&auto=format');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .welcome-content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .welcome-page h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .welcome-page h1 span {
+            color: var(--primary-color);
+        }
+        
+        .welcome-page p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: var(--text-muted);
+        }
+        
+        .welcome-name {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .welcome-actions {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .welcome-counter {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+        
+        .counter-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .welcome-page h1 {
+                font-size: 2.5rem;
+            }
+            
+            .welcome-name {
+                font-size: 2rem;
+            }
+            
+            .welcome-actions {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .welcome-actions a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-page">
+        <div class="welcome-content">
+            <h1>WELCOME TO <span>FITSYNC</span></h1>
+            <div class="welcome-name" id="welcome-name">Fitness Enthusiast</div>
+            <p>Your fitness journey starts now. FitSync provides all the tools you need to achieve your health and fitness goals. Track your workouts, monitor your diet, calculate your BMI, and get expert advice through our FitChat.</p>
+            
+            <div class="welcome-actions">
+                <a href="dashboard.html" class="btn-primary">Go to Dashboard</a>
+                <a href="workout.html" class="btn-secondary">Start Your First Workout</a>
+            </div>
+            
+            <div class="welcome-counter">
+                <p>You will be redirected to dashboard in <span class="counter-number" id="counter">5</span> seconds</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Display user name
+            const welcomeNameElement = document.getElementById('welcome-name');
+            const user = JSON.parse(localStorage.getItem('fitSyncUser'));
+            
+            if (user && user.fullName) {
+                welcomeNameElement.textContent = user.fullName;
+            }
+            
+            // Countdown redirect
+            let seconds = 5;
+            const counterElement = document.getElementById('counter');
+            
+            const countdown = setInterval(function() {
+                seconds--;
+                counterElement.textContent = seconds;
+                
+                if (seconds <= 0) {
+                    clearInterval(countdown);
+                    window.location.href = 'dashboard.html';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSync - FitChat</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h1>FitSync</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="bmi.html"><i class="fas fa-calculator"></i> BMI Calculator</a></li>
+            <li><a href="chatbot.html" class="active"><i class="fas fa-comment-dots"></i> FitChat</a></li>
+            <li><a href="workout.html"><i class="fas fa-dumbbell"></i> Workouts</a></li>
+            <li><a href="diet.html"><i class="fas fa-apple-alt"></i> Diet</a></li>
+        </ul>
+        <div class="nav-profile">
+            <span id="user-name">User</span>
+            <button id="logout-btn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <header class="page-header">
+            <h2>FitChat</h2>
+            <p>Ask questions about fitness, nutrition, and health</p>
+        </header>
+
+        <div class="chatbot-container">
+            <div class="chat-window" id="chat-window">
+                <div class="chat-message bot">
+                    <div class="chat-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chat-content">
+                        <p>Hello! I'm FitChat, your fitness assistant. Ask me questions about workouts, nutrition, or general fitness advice.</p>
+                    </div>
+                </div>
+                <div class="chat-message bot">
+                    <div class="chat-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chat-content">
+                        <p>Try asking:</p>
+                        <ul class="chat-suggestions">
+                            <li>What is a good workout for weight loss?</li>
+                            <li>How many calories should I eat daily?</li>
+                            <li>What's a healthy breakfast idea?</li>
+                            <li>How often should I work out?</li>
+                            <li>How to build muscle?</li>
+                            <li>Best protein sources?</li>
+                            <li>How to increase stamina?</li>
+                            <li>Recovery after workout?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your question here...">
+                <button id="send-btn" class="btn-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 FitSync. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/chatbot.js"></script>
+</body>
+</html> 

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSync - Diet Plans</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h1>FitSync</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="bmi.html"><i class="fas fa-calculator"></i> BMI Calculator</a></li>
+            <li><a href="chatbot.html"><i class="fas fa-comment-dots"></i> FitChat</a></li>
+            <li><a href="workout.html"><i class="fas fa-dumbbell"></i> Workouts</a></li>
+            <li><a href="diet.html" class="active"><i class="fas fa-apple-alt"></i> Diet</a></li>
+        </ul>
+        <div class="nav-profile">
+            <span id="user-name">User</span>
+            <button id="logout-btn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <header class="page-header">
+            <h2>Diet Plans</h2>
+            <p>Weekly meal plans to support your fitness goals</p>
+        </header>
+
+        <div class="diet-tabs">
+            <button class="tab-btn active" data-tab="weight-loss">Weight Loss</button>
+            <button class="tab-btn" data-tab="muscle-gain">Muscle Gain</button>
+            <button class="tab-btn" data-tab="balanced">Balanced</button>
+        </div>
+
+        <div class="diet-plan-container active" id="weight-loss">
+            <div class="diet-header">
+                <h3>Weight Loss Meal Plan</h3>
+                <p>~1600 calories per day, high protein, moderate carbs</p>
+            </div>
+
+            <div class="meal-days">
+                <div class="day-selector">
+                    <button class="day-btn active" data-day="1">Mon</button>
+                    <button class="day-btn" data-day="2">Tue</button>
+                    <button class="day-btn" data-day="3">Wed</button>
+                    <button class="day-btn" data-day="4">Thu</button>
+                    <button class="day-btn" data-day="5">Fri</button>
+                    <button class="day-btn" data-day="6">Sat</button>
+                    <button class="day-btn" data-day="7">Sun</button>
+                </div>
+
+                <div class="day-meals active" data-day="1">
+                    <div class="meal-card">
+                        <div class="meal-header">
+                            <h4>Breakfast</h4>
+                            <span class="meal-calories">350 cal</span>
+                        </div>
+                        <div class="meal-content">
+                            <h5>Greek Yogurt Parfait</h5>
+                            <ul class="meal-ingredients">
+                                <li>1 cup Greek yogurt (0% fat)</li>
+                                <li>1/2 cup mixed berries</li>
+                                <li>1 tbsp honey</li>
+                                <li>2 tbsp granola</li>
+                            </ul>
+                            <div class="meal-nutrition">
+                                <span>Protein: 25g</span>
+                                <span>Carbs: 40g</span>
+                                <span>Fat: 5g</span>
+                            </div>
+                        </div>
+                        <div class="meal-actions">
+                            <button class="btn-secondary"><i class="fas fa-sync-alt"></i> Alternative</button>
+                            <button class="btn-primary"><i class="fas fa-check"></i> Eaten</button>
+                        </div>
+                    </div>
+
+                    <div class="meal-card">
+                        <div class="meal-header">
+                            <h4>Lunch</h4>
+                            <span class="meal-calories">450 cal</span>
+                        </div>
+                        <div class="meal-content">
+                            <h5>Grilled Chicken Salad</h5>
+                            <ul class="meal-ingredients">
+                                <li>4 oz grilled chicken breast</li>
+                                <li>2 cups mixed greens</li>
+                                <li>1/4 avocado</li>
+                                <li>1 tbsp olive oil & vinegar dressing</li>
+                                <li>1/4 cup cherry tomatoes</li>
+                            </ul>
+                            <div class="meal-nutrition">
+                                <span>Protein: 35g</span>
+                                <span>Carbs: 15g</span>
+                                <span>Fat: 20g</span>
+                            </div>
+                        </div>
+                        <div class="meal-actions">
+                            <button class="btn-secondary"><i class="fas fa-sync-alt"></i> Alternative</button>
+                            <button class="btn-primary"><i class="fas fa-check"></i> Eaten</button>
+                        </div>
+                    </div>
+
+                    <div class="meal-card">
+                        <div class="meal-header">
+                            <h4>Dinner</h4>
+                            <span class="meal-calories">550 cal</span>
+                        </div>
+                        <div class="meal-content">
+                            <h5>Baked Salmon with Vegetables</h5>
+                            <ul class="meal-ingredients">
+                                <li>5 oz baked salmon</li>
+                                <li>1 cup steamed broccoli</li>
+                                <li>1/2 cup quinoa</li>
+                                <li>1 tbsp olive oil</li>
+                                <li>Lemon and herbs to taste</li>
+                            </ul>
+                            <div class="meal-nutrition">
+                                <span>Protein: 40g</span>
+                                <span>Carbs: 35g</span>
+                                <span>Fat: 20g</span>
+                            </div>
+                        </div>
+                        <div class="meal-actions">
+                            <button class="btn-secondary"><i class="fas fa-sync-alt"></i> Alternative</button>
+                            <button class="btn-primary"><i class="fas fa-check"></i> Eaten</button>
+                        </div>
+                    </div>
+
+                    <div class="meal-card">
+                        <div class="meal-header">
+                            <h4>Snack</h4>
+                            <span class="meal-calories">250 cal</span>
+                        </div>
+                        <div class="meal-content">
+                            <h5>Protein Smoothie</h5>
+                            <ul class="meal-ingredients">
+                                <li>1 scoop protein powder</li>
+                                <li>1 cup almond milk</li>
+                                <li>1 small banana</li>
+                                <li>Ice cubes</li>
+                            </ul>
+                            <div class="meal-nutrition">
+                                <span>Protein: 25g</span>
+                                <span>Carbs: 30g</span>
+                                <span>Fat: 3g</span>
+                            </div>
+                        </div>
+                        <div class="meal-actions">
+                            <button class="btn-secondary"><i class="fas fa-sync-alt"></i> Alternative</button>
+                            <button class="btn-primary"><i class="fas fa-check"></i> Eaten</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other days would be added here with data-day attributes -->
+            </div>
+        </div>
+
+        <div class="diet-plan-container" id="muscle-gain">
+            <!-- Similar structure as above, but with muscle gain focused meals -->
+            <div class="diet-header">
+                <h3>Muscle Gain Meal Plan</h3>
+                <p>~2800 calories per day, high protein, high carbs</p>
+            </div>
+            <!-- Meals would go here -->
+        </div>
+
+        <div class="diet-plan-container" id="balanced">
+            <!-- Similar structure as above, but with balanced meals -->
+            <div class="diet-header">
+                <h3>Balanced Meal Plan</h3>
+                <p>~2000 calories per day, balanced macronutrients</p>
+            </div>
+            <!-- Meals would go here -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 FitSync. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/diet.js"></script>
+</body>
+</html> 

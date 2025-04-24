@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSync - Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h1>FitSync</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="bmi.html"><i class="fas fa-calculator"></i> BMI Calculator</a></li>
+            <li><a href="chatbot.html"><i class="fas fa-comment-dots"></i> FitChat</a></li>
+            <li><a href="workout.html"><i class="fas fa-dumbbell"></i> Workouts</a></li>
+            <li><a href="diet.html"><i class="fas fa-apple-alt"></i> Diet</a></li>
+        </ul>
+        <div class="nav-profile">
+            <span id="user-name">User</span>
+            <button id="logout-btn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <header class="welcome-header">
+            <h2>Welcome, <span id="greeting-name">Fitness Enthusiast</span>!</h2>
+            <p id="motivational-quote">"The only bad workout is the one that didn't happen."</p>
+        </header>
+
+        <div class="quick-links">
+            <div class="card" onclick="location.href='bmi.html'">
+                <div class="card-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <div class="card-content">
+                    <h3>BMI Calculator</h3>
+                    <p>Check your Body Mass Index</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="location.href='chatbot.html'">
+                <div class="card-icon">
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                <div class="card-content">
+                    <h3>FitChat</h3>
+                    <p>Ask questions about fitness</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="location.href='workout.html'">
+                <div class="card-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Workout Routines</h3>
+                    <p>Explore exercises for your goals</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="location.href='diet.html'">
+                <div class="card-icon">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Diet Plans</h3>
+                    <p>Find the right nutrition plan</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-banner">
+            <h2>GROW YOUR STRENGTH</h2>
+            <p>Track progress, stay motivated, achieve your fitness goals</p>
+            <a href="workout.html" class="btn-primary">Start Workout</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 FitSync. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html> 

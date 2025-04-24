@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSync - BMI Calculator</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h1>FitSync</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="bmi.html" class="active"><i class="fas fa-calculator"></i> BMI Calculator</a></li>
+            <li><a href="chatbot.html"><i class="fas fa-comment-dots"></i> FitChat</a></li>
+            <li><a href="workout.html"><i class="fas fa-dumbbell"></i> Workouts</a></li>
+            <li><a href="diet.html"><i class="fas fa-apple-alt"></i> Diet</a></li>
+        </ul>
+        <div class="nav-profile">
+            <span id="user-name">User</span>
+            <button id="logout-btn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <header class="page-header">
+            <h2>BMI Calculator</h2>
+            <p>Calculate your Body Mass Index to assess your weight relative to your height</p>
+        </header>
+
+        <div class="bmi-calculator">
+            <div class="bmi-form">
+                <div class="form-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="Enter your weight" min="30" max="300" required>
+                </div>
+                <div class="form-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" placeholder="Enter your height" min="100" max="250" required>
+                </div>
+                <div class="form-actions">
+                    <button id="calculate-bmi" class="btn-primary">Calculate BMI</button>
+                    <button id="reset-bmi" class="btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <div class="bmi-result" id="bmi-result">
+                <div class="result-container">
+                    <h3>Your BMI</h3>
+                    <div class="bmi-score" id="bmi-score">--</div>
+                    <div class="bmi-category" id="bmi-category">--</div>
+                </div>
+                <div class="bmi-info">
+                    <h4>Health Tip</h4>
+                    <p id="bmi-tip">Calculate your BMI to see personalized health tips.</p>
+                </div>
+                <div class="bmi-scale">
+                    <div class="scale-item underweight">
+                        <span class="scale-label">Underweight</span>
+                        <span class="scale-value">&lt; 18.5</span>
+                    </div>
+                    <div class="scale-item normal">
+                        <span class="scale-label">Normal</span>
+                        <span class="scale-value">18.5 - 24.9</span>
+                    </div>
+                    <div class="scale-item overweight">
+                        <span class="scale-label">Overweight</span>
+                        <span class="scale-value">25 - 29.9</span>
+                    </div>
+                    <div class="scale-item obese">
+                        <span class="scale-label">Obese</span>
+                        <span class="scale-value">&gt; 30</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 FitSync. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/bmi.js"></script>
+</body>
+</html> 

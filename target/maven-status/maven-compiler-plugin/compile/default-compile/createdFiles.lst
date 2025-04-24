@@ -1,0 +1,6 @@
+com/fitsync/servlet/RegisterServlet.class
+com/fitsync/util/DatabaseUtil.class
+com/fitsync/dao/UserDAO.class
+com/fitsync/model/User.class
+com/fitsync/servlet/LogoutServlet.class
+com/fitsync/servlet/LoginServlet.class

@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:22:37 +0530] "GET /fitsync HTTP/1.1" 302 - http-bio-8090-exec-1 0
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:22:37 +0530] "GET /fitsync/ HTTP/1.1" 200 2286 http-bio-8090-exec-3 13
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:22:37 +0530] "GET /fitsync/css/style.css HTTP/1.1" 304 - http-bio-8090-exec-4 3
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:22:38 +0530] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8090-exec-5 0
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:22:43 +0530] "GET /fitsync/pages/register.jsp HTTP/1.1" 200 2850 http-bio-8090-exec-6 8
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:22:53 +0530] "POST /fitsync/login HTTP/1.1" 302 - http-bio-8090-exec-7 402
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:22:53 +0530] "GET /fitsync/pages/welcome.html HTTP/1.1" 304 - http-bio-8090-exec-8 1
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:22:53 +0530] "GET /fitsync/js/common.js HTTP/1.1" 304 - http-bio-8090-exec-9 1
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:22:58 +0530] "GET /fitsync/pages/dashboard.html HTTP/1.1" 304 - http-bio-8090-exec-10 2
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:22:58 +0530] "GET /fitsync/js/dashboard.js HTTP/1.1" 304 - http-bio-8090-exec-10 2
+0:0:0:0:0:0:0:1 - - [24/Apr/2025:09:23:16 +0530] "POST /fitsync/login HTTP/1.1" 200 2460 http-bio-8090-exec-10 39

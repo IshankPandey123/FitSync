@@ -1,0 +1,1068 @@
+@charset "UTF-8";
+/* Global Styles */
+:root {
+    --primary-color: #4CAF50;
+    --primary-dark: #388E3C;
+    --primary-light: #81C784;
+    --bg-dark: #121212;
+    --bg-card: #1E1E1E;
+    --bg-light: #2D2D2D;
+    --text-light: #FFFFFF;
+    --text-muted: #BBBBBB;
+    --text-dark: #333333;
+    --danger: #F44336;
+    --warning: #FFC107;
+    --info: #2196F3;
+    --success: #4CAF50;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-light);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Login Page */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.login-image {
+    flex: 1;
+    background-image: url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&auto=format');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.login-text {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.login-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.login-text h1 span {
+    color: var(--primary-color);
+}
+
+.login-text p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.scroll-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.login-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.login-form-container .auth-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    animation: fadeInRight 0.5s ease;
+}
+
+.login-btn {
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Button Styles */
+.btn-primary, 
+.btn-secondary, 
+.btn-danger, 
+.btn-logout {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: #3D3D3D;
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: var(--text-light);
+}
+
+.btn-danger:hover {
+    background-color: #D32F2F;
+}
+
+.btn-logout {
+    background-color: transparent;
+    color: var(--text-muted);
+    padding: 8px 16px;
+}
+
+.btn-logout:hover {
+    color: var(--text-light);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-send {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-send:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Authentication Pages */
+.auth-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.5s ease;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.tagline {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--bg-light);
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.error-message {
+    color: var(--danger);
+    font-size: 0.9rem;
+    margin: 10px 0;
+    min-height: 20px;
+}
+
+.auth-form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.auth-redirect {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--bg-card);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.nav-logo h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.nav-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#user-name {
+    font-weight: 500;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+/* Dashboard */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.welcome-header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 0.5s ease;
+}
+
+.welcome-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#motivational-quote {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon {
+    background-color: var(--primary-color);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.dashboard-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 40px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 0.8s ease;
+}
+
+.dashboard-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.dashboard-banner p {
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Page Layout */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 0.5s ease;
+}
+
+.page-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* BMI Calculator */
+.bmi-calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.5s ease;
+}
+
+.bmi-form {
+    padding-right: 30px;
+    border-right: 1px solid var(--bg-light);
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.form-actions button {
+    flex: 1;
+}
+
+.bmi-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.result-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bmi-score {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--primary-color);
+}
+
+.bmi-category {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+
+.bmi-info {
+    margin-bottom: 20px;
+}
+
+.bmi-info h4 {
+    margin-bottom: 10px;
+}
+
+.bmi-scale {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.scale-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-light);
+}
+
+.scale-label {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.scale-value {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.underweight .scale-value {
+    color: var(--info);
+}
+
+.normal .scale-value {
+    color: var(--success);
+}
+
+.overweight .scale-value {
+    color: var(--warning);
+}
+
+.obese .scale-value {
+    color: var(--danger);
+}
+
+/* Chatbot */
+.chatbot-container {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    animation: fadeIn 0.5s ease;
+}
+
+.chat-window {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-message {
+    display: flex;
+    gap: 15px;
+    max-width: 80%;
+}
+
+.chat-message.user {
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+.chat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.chat-message.user .chat-avatar {
+    background-color: var(--info);
+}
+
+.chat-content {
+    background-color: var(--bg-light);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    border-top-left-radius: 0;
+}
+
+.chat-message.user .chat-content {
+    background-color: var(--primary-dark);
+    border-radius: var(--border-radius);
+    border-top-right-radius: 0;
+}
+
+.chat-suggestions {
+    margin-top: 10px;
+}
+
+.chat-suggestions li {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.chat-suggestions li:hover {
+    background-color: rgba(76, 175, 80, 0.2);
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    background-color: var(--bg-light);
+    gap: 10px;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.chat-input input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Workout Routines */
+.workout-filters {
+    margin-bottom: 30px;
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 250px;
+}
+
+.filter-group label {
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-light);
+    color: var(--text-muted);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.workout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    animation: fadeIn 0.5s ease;
+}
+
+.workout-card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.workout-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.workout-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.workout-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.workout-card:hover .workout-image img {
+    transform: scale(1.05);
+}
+
+.workout-content {
+    padding: 20px;
+}
+
+.workout-content h3 {
+    margin-bottom: 10px;
+}
+
+.workout-meta {
+    display: flex;
+    gap: 15px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.workout-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.workout-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.workout-actions button {
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+}
+
+/* Diet Plan */
+.diet-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-btn {
+    padding: 10px 25px;
+    background-color: var(--bg-card);
+    color: var(--text-muted);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.diet-plan-container {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.diet-plan-container.active {
+    display: block;
+}
+
+.diet-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.diet-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.diet-header p {
+    color: var(--text-muted);
+}
+
+.meal-days {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.day-selector {
+    display: flex;
+    background-color: var(--bg-light);
+    overflow-x: auto;
+}
+
+.day-btn {
+    padding: 15px 25px;
+    background-color: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 70px;
+    text-align: center;
+}
+
+.day-btn:hover, .day-btn.active {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+.day-meals {
+    display: none;
+    padding: 25px;
+}
+
+.day-meals.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.meal-card {
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.meal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.meal-header {
+    background-color: var(--primary-dark);
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meal-header h4 {
+    color: white;
+}
+
+.meal-calories {
+    background-color: var(--bg-dark);
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.meal-content {
+    padding: 15px;
+}
+
+.meal-content h5 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.meal-ingredients {
+    margin-bottom: 15px;
+}
+
+.meal-ingredients li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.meal-ingredients li::before {
+    content: "•";
+    position: absolute;
+    left: 5px;
+    color: var(--primary-color);
+}
+
+.meal-nutrition {
+    background-color: var(--bg-dark);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.meal-nutrition span {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.meal-actions {
+    display: flex;
+    gap: 10px;
+    padding: 0 15px 15px 15px;
+}
+
+.meal-actions button {
+    flex: 1;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-card);
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .bmi-calculator {
+        grid-template-columns: 1fr;
+    }
+    
+    .bmi-form {
+        border-right: none;
+        border-bottom: 1px solid var(--bg-light);
+        padding-right: 0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .login-container {
+        flex-direction: column;
+    }
+    
+    .login-image {
+        min-height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+    
+    .nav-links {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .day-meals.active {
+        grid-template-columns: 1fr;
+    }
+    
+    .login-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .auth-container, 
+    .dashboard-container, 
+    .page-container {
+        padding: 20px 15px;
+    }
+    
+    .workout-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .login-text h1 {
+        font-size: 2rem;
+    }
+    
+    .login-text p {
+        font-size: 1rem;
+    }
+} 
