@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DatabaseUtil {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/fitsync_app";
     private static final String JDBC_USER = "root";
-    private static final String JDBC_PASSWORD = "ishank@123";
+    private static final String JDBC_PASSWORD = "Use Your My Sql Password here";
     
     static {
         try {
